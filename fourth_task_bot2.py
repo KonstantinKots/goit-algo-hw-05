@@ -68,8 +68,6 @@ def show_phone(args: list, contacts: dict):
     Повертає повідомлення (ім'я):(телефон).
     """
     name = args[0].strip()
-    if name not in contacts:
-        raise KeyError
     return (f"{name}:{contacts[name]}")
 
 def show_all(contacts: dict):
