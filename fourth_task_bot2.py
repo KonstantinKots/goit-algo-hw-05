@@ -27,6 +27,7 @@ def input_error(func):
     return inner
 
 #функція парсингу командної сторки
+@input_error
 def parse_input(user_input: str):
     cmd, *args = user_input.split()
     cmd = cmd.strip().lower()
@@ -145,7 +146,6 @@ def main():
 
         elif command == "help":
             print(commands)
-
         else:
             print("Invalid command.")
 
